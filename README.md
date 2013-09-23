@@ -3,6 +3,8 @@ SlugBehavior-for-CakePHP
 
 Adaptated for CakePHP 2.4
 
+Documentation en français disponible ici : http://lartak.github.io/SlugBehavior-for-CakePHP
+
 This Behavior that automates the development of slug during a backup, either when the record was created or when editing.
 
 To use, import the file in your CakePHP Model (app/Model) application folder.
