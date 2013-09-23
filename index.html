@@ -1,52 +1,91 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-
   <head>
-    <meta charset='utf-8' />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="SlugBehavior-for-CakePHP : Adapté pour CakePHP version 2.4" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>SlugBehavior-for-CakePHP by Lartak</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/main.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-
-    <title>SlugBehavior-for-CakePHP</title>
   </head>
-
   <body>
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/Lartak/SlugBehavior-for-CakePHP">View on GitHub</a>
+      <header>
+        <h1>SlugBehavior-for-CakePHP</h1>
+        <p>Adapté pour CakePHP version 2.4</p>
+      </header>
 
-          <h1 id="project_title">SlugBehavior-for-CakePHP</h1>
-          <h2 id="project_tagline">Adapté pour CakePHP version 2.4</h2>
+      <div id="banner">
+        <span id="logo"></span>
 
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/Lartak/SlugBehavior-for-CakePHP/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/Lartak/SlugBehavior-for-CakePHP/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
-    </div>
+        <a href="https://github.com/Lartak/SlugBehavior-for-CakePHP" class="button fork"><strong>View On GitHub</strong></a>
+        <div class="downloads">
+          <span>Downloads:</span>
+          <ul>
+            <li><a href="https://github.com/Lartak/SlugBehavior-for-CakePHP/zipball/master" class="button">ZIP</a></li>
+            <li><a href="https://github.com/Lartak/SlugBehavior-for-CakePHP/tarball/master" class="button">TAR</a></li>
+          </ul>
+        </div>
+      </div><!-- end banner -->
 
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h1>
-<a name="pr%C3%A9sentation" class="anchor" href="#pr%C3%A9sentation"><span class="octicon octicon-link"></span></a>Présentation</h1>
+    <div class="wrapper">
+      <nav>
+        <ul></ul>
+      </nav>
+      <section>
+        <h2>
+<a name="pr%C3%A9sentation" class="anchor" href="#pr%C3%A9sentation"><span class="octicon octicon-link"></span></a>Présentation</h2>
 
 <p>Ce comportement (Behavior) automatise le développement de slug lors d'une sauvegarde, soit au moment de la création de l'enregistrement soit lors de la modification.</p>
-      </section>
-    </div>
 
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">SlugBehavior-for-CakePHP maintained by <a href="https://github.com/Lartak">Lartak</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+<h2>
+<a name="installation" class="anchor" href="#installation"><span class="octicon octicon-link"></span></a>Installation</h2>
+
+<p>Pour l'utiliser, importer le fichier dans votre dossier d'application CakePHP Behavior (app/Model/Behavior).</p>
+
+<p>Puis ajouter dans le modèle que vous souhaitez utiliser:</p>
+
+<p><code>public $actsAs =  array('Slug');</code></p>
+
+<p>Les options par défaut du Behavior sont :</p>
+
+<ul>
+<li>Pour le champ source : <strong>name</strong>
+</li>
+<li>Pour le champ de sauvegarde du slug : <strong>slug</strong>
+</li>
+<li>Le séparateur utilisé : <strong>-</strong>
+</li>
+</ul><p>Pour modifier une de ses options ou toutes, voir dans la partie utilisation.</p>
+
+<h2>
+<a name="utilisation" class="anchor" href="#utilisation"><span class="octicon octicon-link"></span></a>Utilisation</h2>
+
+<p>Vous pouvez modifier les options lorsque vous appelez le Behavior dans votre modèle comme ceci:</p>
+
+<pre><code>`public $actsAs  = array(
+  'Slug'  =&gt;  array(
+    'fieldName' =&gt;  'title',
+    'fieldSlug' =&gt;  'slug2',
+    'separator' =&gt;  '_'
+    )
+  );`
+</code></pre>
+
+<p>Vous n'avez rien d'autre à faire, au cours de chaque sauvegarde de votre modèle, le Behavior effectuera le slug.</p>
+      </section>
+      <footer>
+        <p>Project maintained by <a href="https://github.com/Lartak">Lartak</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></small></p>
       </footer>
     </div>
-
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
     
-
   </body>
 </html>
