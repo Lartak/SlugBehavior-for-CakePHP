@@ -11,7 +11,7 @@ To use, import the file in your CakePHP Model (app/Model) application folder.
 
 Then add in the model you want to use:
 
-    public $actsAs =  array('slug');
+    public $actsAs =  array('Slug');
 
 The default options are the Behavior:
 
