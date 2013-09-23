@@ -5,7 +5,7 @@ Adaptated for CakePHP 2.4
 
 This Behavior that automates the development of slug during a backup, either when the record was created or when editing.
 
-To use, import the file in your CakePHP Model (app / Model) application folder.
+To use, import the file in your CakePHP Model (app/Model) application folder.
 
 Then add in the model you want to use:
     public $actsAs =  array('slug');
