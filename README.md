@@ -8,6 +8,7 @@ This Behavior that automates the development of slug during a backup, either whe
 To use, import the file in your CakePHP Model (app/Model) application folder.
 
 Then add in the model you want to use:
+
     public $actsAs =  array('slug');
 
 The default options are the Behavior:
