@@ -48,7 +48,7 @@
 <h2>
 <a name="installation" class="anchor" href="#installation"><span class="octicon octicon-link"></span></a>Installation</h2>
 
-<p>To use, import the file in your CakePHP Model (app/Model) application folder.</p>
+<p>To use, import the file in your CakePHP Model (app/Model/Behavior) application folder.</p>
 
 <p>Then add in the model you want to use:</p>
 
@@ -63,6 +63,7 @@
 </li>
 <li>The separator used : <strong>-</strong>
 </li>
+<li>Format : <strong>true</strong></li>
 </ul><p>To change one or all of its options, see the usage section.</p>
 
 <h2>
@@ -74,7 +75,8 @@
   'Slug'  =&gt;  array(
     'fieldName' =&gt;  'title',
     'fieldSlug' =&gt;  'slug2',
-    'separator' =&gt;  '_'
+    'separator' =&gt;  '_', 
+    'lowercase' =&gt;  true
     )
   );`
 </code></pre>
