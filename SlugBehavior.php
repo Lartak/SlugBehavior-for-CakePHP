@@ -17,7 +17,7 @@ class SlugBehavior extends ModelBehavior {
 				'lowercase'	=>	true // Majuscules non autorisée par défaut (définir à false pour autoriser les majuscules)
 			);
 		}
-		$this->settings[$Model->alias] = array_merge($this->settings[$Model->alias], $settings);
+		$this->settings[$Model->alias] = array_merge($this->settings[$Model->alias], (array)$settings);
 	}
 
 	public function beforeSave(Model $Model, $options = array()) {
@@ -35,4 +35,10 @@ class SlugBehavior extends ModelBehavior {
 			$Model->data[$Model->alias][$fieldSlug] = $slug; 
 		}
 	}
+	
+/*	public function getSlugs(Model $Model, $results, $primary = false) {
+		$this->loadModel($Model->alias);
+		$options = array('fields' => array($this->settings[$Model->alias]['fieldSlug']));
+		return $this->{$Model->alias}->find('all', $options);
+	}*/
 }
